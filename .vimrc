@@ -21,7 +21,7 @@ set t_Co=256
 colorscheme delek
 syntax on
 
-" Press jj to escape
+" Press jk to escape
 imap jk <Esc>
 
 " Put all swap files together in one place
@@ -85,3 +85,9 @@ set expandtab
 
 let mapleader = ";"
 
+
+
+
+" System clipboard copy & paste support
+" F2 before pasting to preserve indentation
+set pastetoggle=<F2> 
