@@ -12,13 +12,12 @@ dotfiles: ## Installs the dotfiles.
 	ln -sfn $(CURDIR)/.gnupg/gpg.conf $(HOME)/.gnupg/gpg.conf;
 	ln -sfn $(CURDIR)/.gnupg/gpg-agent.conf $(HOME)/.gnupg/gpg-agent.conf;
 	ln -fn $(CURDIR)/gitignore $(HOME)/.gitignore;
-	git update-index --skip-worktree $(CURDIR)/.gitconfig;
-	mkdir -p $(HOME)/.local/share;
-	ln -snf $(CURDIR)/.fonts $(HOME)/.local/share/fonts;
-	ln -snf $(CURDIR)/.bash_profile $(HOME)/.profile;
-	if [ -f /usr/local/bin/pinentry ]; then \
-		sudo ln -snf /usr/bin/pinentry /usr/local/bin/pinentry; \
-	fi;
+	#mkdir -p $(HOME)/.local/share;
+	#ln -snf $(CURDIR)/.fonts $(HOME)/.local/share/fonts;
+	#ln -snf $(CURDIR)/.bash_profile $(HOME)/.profile;
+	#if [ -f /usr/local/bin/pinentry ]; then \
+	#	sudo ln -snf /usr/bin/pinentry /usr/local/bin/pinentry; \
+	#fi;
 
 .PHONY: test
 test: shellcheck ## Runs all the tests on the files in the repository.
@@ -37,7 +36,7 @@ shellcheck: ## Runs the shellcheck tests on the scripts.
 		--name df-shellcheck \
 		-v $(CURDIR):/usr/src:ro \
 		--workdir /usr/src \
-		r.j3ss.co/shellcheck ./test.sh
+		koalaman/shellcheck ./test.sh
 
 .PHONY: help
 help:
