@@ -12,12 +12,21 @@ dotfiles: ## Installs the dotfiles.
 	ln -sfn $(CURDIR)/.gnupg/gpg.conf $(HOME)/.gnupg/gpg.conf;
 	ln -sfn $(CURDIR)/.gnupg/gpg-agent.conf $(HOME)/.gnupg/gpg-agent.conf;
 	ln -fn $(CURDIR)/gitignore $(HOME)/.gitignore;
+	ln -sfn $(CURDIR)/tmuxifier_layouts $(HOME)/.tmuxifier_layouts
 	#mkdir -p $(HOME)/.local/share;
 	#ln -snf $(CURDIR)/.fonts $(HOME)/.local/share/fonts;
 	#ln -snf $(CURDIR)/.bash_profile $(HOME)/.profile;
 	#if [ -f /usr/local/bin/pinentry ]; then \
 	#	sudo ln -snf /usr/bin/pinentry /usr/local/bin/pinentry; \
 	#fi;
+
+
+.PHONY: config
+config: ## Installs the configuration files.
+	for file in $(shell find $(CURDIR)/config -type d); do \
+		f=$$(basename $$file); \
+		ln -sfn $$file $(HOME)/.config/$$f; \
+	done; \
 
 .PHONY: test
 test: shellcheck ## Runs all the tests on the files in the repository.
