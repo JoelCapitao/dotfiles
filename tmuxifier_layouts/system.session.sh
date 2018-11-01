@@ -7,8 +7,8 @@ session_root "~"
 if initialize_session "system"; then
 
   # Load a defined window layout.
-  load_window "vim"
   load_window "dotfiles"
+  load_window "vim"
 
   # Select the default active window on session creation.
   select_window 1
