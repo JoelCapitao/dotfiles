@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# add tmuxifier path
+export PATH="$HOME/.tmuxifier/bin:$PATH"
