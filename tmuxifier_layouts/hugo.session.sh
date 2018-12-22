@@ -9,7 +9,6 @@ if initialize_session "hugo"; then
   # Load a defined window layout.
   load_window "editor"
   load_window "hugo"
-  load_window "git"
 
   # Select the default active window on session creation.
   select_window 1
