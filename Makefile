@@ -25,7 +25,7 @@ dotfiles: ## Installs the dotfiles.
 config: ## Installs the configuration files.
 	for file in $(shell find $(CURDIR)/config -type d); do \
 		f=$$(basename $$file); \
-		ln -sfn $$file $(HOME)/.config/$$f; \
+		ln -sfn $$file $(HOME)/.config; \
 	done; \
 
 .PHONY: test
