@@ -12,7 +12,7 @@ for_window [class="^.*"] border pixel 2
 gaps inner 5
 gaps outer 5
 smart_borders on
-new_window none
+jew_window none
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -124,8 +124,8 @@ mode "resize" {
 }
 
 # i3status bar config
-bar {
-  font pango:monospace 16
-    status_command $barcmd #--config ~/.config/i3/status.conf
-
-}
+#bar {
+#  font pango:monospace 16
+#    status_command $barcmd #--config ~/.config/i3/status.conf
+#
+#}
