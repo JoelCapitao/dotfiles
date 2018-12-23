@@ -2,17 +2,26 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+# i3-gaps integration
+for_window [class="^.*"] border pixel 2
+gaps inner 15
+gaps outer 15
+smart_borders on
+
+# basic definitions
 set $mod Mod4
-set $term urxvt
+set $term --no-startup-id $TERMINAL
 set $menu dmenu_run
 set $lockcmd i3lock
+set $stoprec --no-startup-id dmenurecord kill
+set $shutdown sudo -A shutdown -h now
+set $reboot sudo -A reboot
+set $netrefresh --no-startup-id sudo -A systemctl restart NetworkManager
+set $hibernate sudo -A systemctl suspend
 
-########## i3-gaps integration ##########
-for_window [class="^.*"] border pixel 2
-gaps inner 5
-gaps outer 5
-smart_borders on
-jew_window none
+
+# external scripts
+exec --no-startup-id feh --bg-scale ~/.config/wall.jpg
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -81,6 +90,29 @@ bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
+
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# switch to workspace
+bindsym $mod+1		workspace $ws1
+bindsym $mod+2		workspace $ws2
+bindsym $mod+3		workspace $ws3
+bindsym $mod+4		workspace $ws4
+bindsym $mod+5		workspace $ws5
+bindsym $mod+6		workspace $ws6
+bindsym $mod+7		workspace $ws7
+bindsym $mod+8		workspace $ws8
+bindsym $mod+9		workspace $ws9
+bindsym $mod+0          workspace $ws10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1

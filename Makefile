@@ -23,7 +23,7 @@ dotfiles: ## Installs the dotfiles.
 
 .PHONY: config
 config: ## Installs the configuration files.
-	for file in $(shell find $(CURDIR)/config -type d); do \
+	for file in $(shell find $(CURDIR)/config -mindepth 1 -maxdepth 1); do \
 		f=$$(basename $$file); \
 		ln -sfn $$file $(HOME)/.config; \
 	done; \
