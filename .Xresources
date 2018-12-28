@@ -65,6 +65,6 @@ URxvt.clipboard.pastecmd:           xclip -o -selection clipboard
 !! URxvt*cursorColor:                  #737077
 !! URxvt*underlineURLs:                true
 
-URxvt*font: -*-dina-medium-r-*-*-*-90-*-*-*-*-*-*
-URxvt*italic: -*-dina-medium-*-*-*-*-90-*-*-*-*-*-*
-URxvt*boldFont: -*-dina-bold-r-*-*-*-90-*-*-*-*-*-*
+!! URxvt*font: -*-dina-medium-r-*-*-*-90-*-*-*-*-*-*
+!! URxvt*italic: -*-dina-medium-*-*-*-*-90-*-*-*-*-*-*
+!! URxvt*boldFont: -*-dina-bold-r-*-*-*-90-*-*-*-*-*-*
