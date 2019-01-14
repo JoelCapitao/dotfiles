@@ -5,6 +5,9 @@ export TERMINAL="urxvt"
 export BROWSER="firefox"
 export READER="zathura"
 
+# Tmuxifier export
+export PATH="$HOME/.tmuxifier/bin:$PATH"
+export TMUXIFIER_LAYOUT_PATH="$HOME/.tmuxifier_layouts"
 
 [ -f ~/.bashrc ] && source "$HOME/.bashrc"
 
