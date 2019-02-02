@@ -4,6 +4,8 @@ export EDITOR="vim"
 export TERMINAL="urxvt"
 export BROWSER="firefox"
 export READER="zathura"
+# Adds `~/.scripts` and all subdirectories to $PATH
+export PATH="$PATH:$(du "$HOME/.scripts/" | cut -f2 | tr '\n' ':')"
 
 # Tmuxifier export
 export PATH="$HOME/.tmuxifier/bin:$PATH"
