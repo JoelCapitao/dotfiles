@@ -2,8 +2,9 @@
 
 # Make default program
 export EDITOR="vim";
-export TERMINAL="urxvt";
+export TERMINAL="terminator";
 export BROWSER="firefox";
+export FILE="ranger";
 
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=50000000;
