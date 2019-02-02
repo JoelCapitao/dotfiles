@@ -7,7 +7,6 @@ session_root "~/ownCloud/Development/netary"
 if initialize_session "hugo"; then
 
   # Load a defined window layout.
-  load_window "editor"
   load_window "hugo"
 
   # Select the default active window on session creation.

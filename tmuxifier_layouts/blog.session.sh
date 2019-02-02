@@ -7,7 +7,6 @@ session_root "~/ownCloud/Development/blog"
 if initialize_session "blog"; then
 
   # Load a defined window layout.
-  load_window "editor"
   load_window "hugo"
 
   # Select the default active window on session creation.
