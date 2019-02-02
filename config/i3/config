@@ -11,14 +11,12 @@ smart_borders on
 # basic definitions
 set $mod Mod4
 set $term --no-startup-id $TERMINAL
-set $menu dmenu_run
 set $lockcmd i3lock
 set $stoprec --no-startup-id dmenurecord kill
 set $shutdown sudo -A shutdown -h now
 set $reboot sudo -A reboot
 set $netrefresh --no-startup-id sudo -A systemctl restart NetworkManager
 set $hibernate sudo -A systemctl suspend
-
 
 # external scripts
 exec --no-startup-id feh --bg-scale ~/.config/wall.jpg
@@ -33,8 +31,8 @@ bindsym $mod+space	      focus mode_toggle
 bindsym $mod+Escape	      workspace prev
 bindsym $mod+Shift+Escape     exec --no-startup-id prompt "Exit i3?" "i3-msg exit"
 
-bindsym $mod+BackSpace
-bindsym $mod+Shift+BackSpace  exec --no-startup-id prompt "Reboot computer?" "$reboot"
+#bindsym $mod+BackSpace
+#bindsym $mod+Shift+BackSpace  exec --no-startup-id prompt "Reboot computer?" "$reboot"
 
 # Letter key bindings
 bindsym $mod+q			[con_id="__focused__" instance="^(?!dropdown_).*$"] kill
@@ -43,6 +41,7 @@ bindsym $mod+Shift+q		[con_id="__focused__" instance="^(?!dropdown_).*$"] kill
 bindsym $mod+e			exec $term -e neomutt && pkill -RTMIN+12 i3blocks
 
 bindsym $mod+r 			exec $term -e $FILE
+bindsym $mod+Shift+r		restart
 
 bindsym $mod+t			split toggle
 bindsym $mod+Shift+t		gaps inner current set 15; gaps outer current set 15
@@ -123,65 +122,6 @@ font pango:Monospace 16
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
-bindsym $mod+Return exec $term
-
-# start dmenu
-bindsym $mod+d exec $menu
-
-# kill focused window
-bindsym $mod+Shift+q kill
-
-# lock screen
-# bindsym $mod+l exec $lockcmd -c 111111
-
-# change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-
-# move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
-
-# split in horizontal orientation
-bindsym $mod+h split h
-
-# split in vertical orientation
-bindsym $mod+v split v
-
-# enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
-
-# change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
-
-# toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
-
-# change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
-
-# focus the parent container
-bindsym $mod+a focus parent
-
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -217,34 +157,28 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
-# reload the configuration file
-bindsym $mod+Shift+c reload
-
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
-
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
-bindsym $mod+r mode "resize"
-mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
-
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
-
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
+#bindsym $mod+r mode "resize"
+#kmode "resize" {
+#k        # These bindings trigger as soon as you enter the resize mode
+#k        bindsym j resize shrink width 10 px or 10 ppt
+#k        bindsym k resize grow height 10 px or 10 ppt
+#k        bindsym l resize shrink height 10 px or 10 ppt
+#k        bindsym semicolon resize grow width 10 px or 10 ppt
+#k
+#k        # same bindings, but for the arrow keys
+#k        bindsym Left resize shrink width 10 px or 10 ppt
+#k        bindsym Down resize grow height 10 px or 10 ppt
+#k        bindsym Up resize shrink height 10 px or 10 ppt
+#k        bindsym Right resize grow width 10 px or 10 ppt
+#k
+#k        # back to normal: Enter or Escape
+#k        bindsym Return mode "default"
+#k        bindsym Escape mode "default"
+#k}
 
 # i3status bar config
 #bar {
