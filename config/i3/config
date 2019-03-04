@@ -186,3 +186,10 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 #    status_command $barcmd #--config ~/.config/i3/status.conf
 #
 #}
+bar {
+	font pango:mono 10
+	status_command i3blocks
+	position top
+	mode dock
+	modifier None
+}
