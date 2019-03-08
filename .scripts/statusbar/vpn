@@ -13,8 +13,8 @@ else
     STATUS=OFF
 fi
 
-echo $STATUS
-echo $STATUS
+echo VPN
+echo VPN
 
 ##Colors
 if [[ "$STATUS" == "ON" ]]
