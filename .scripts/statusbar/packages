@@ -1,0 +1,21 @@
+#!/bin/bash
+
+packages=$(apt-get -s dist-upgrade | awk '/^Inst/ { print $2  }')
+numPackages=$(apt-get -s dist-upgrade | awk '/^Inst/ { print $2  }' | wc -l)
+
+echo "$numPackages"
+echo "$numPackages"
+
+if [ $numPackages -eq 0 ]
+then
+    echo "#00ff00"
+else
+    echo "#ff0000"
+fi
+
+case $BLOCK_BUTTON in
+      # right click: show packages
+      3) notify-send "Packages" "$packages" ;;
+esac
+
+exit 0
