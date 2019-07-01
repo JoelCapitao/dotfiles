@@ -1,10 +1,10 @@
 #!/bin/bash
 
 export EDITOR="vim"
-export TERMINAL="terminator"
+export TERMINAL="st"
 export BROWSER="firefox"
 export READER="zathura"
-export FILE="ranger"
+export FILE="vifm"
 
 [ -f ~/.bashrc ] && source "$HOME/.bashrc"
 
