@@ -1,3 +1,12 @@
+!! Transparency (0-1):
+st.alpha: 0.5
+
+!! Set a default font and font size as below:
+st.font: Monospace-11;
+
+! st.termname: st-256color
+! st.borderpx: 2
+
 !! Gruvbox color table
 !! https://github.com/morhetz/gruvbox-contrib/blob/master/color.table
 
@@ -38,33 +47,3 @@
 
 !! Transparency (0-255):
 *.alpha: 230
-
-!! -------------------------------------------
-!! URXVT - Settings
-
-URxvt*scrollTtyKeypress:            true
-URxvt*scrollTtyOutput:  false
-URxvt*scrollWithBuffer:  false
-URxvt*skipScroll:  true
-URxvt.scrollBar: false
-URxvt*fading:  30
-URxvt*visualBell:  true
-URxvt*background:  Black
-URxvt*foreground:  White
-URxvt.clipboard.autocopy:           true
-URxvt.clipboard.copycmd:            xclip -i -selection clipboard
-URxvt.clipboard.pastecmd:           xclip -o -selection clipboard
-
-
-!! URxvt*depth:                        32
-!! URxvt*internalBorder:               3
-!! URxvt*dynamicColors:                on
-!! URxvt*borderLess:                   false
-!! URxvt*cursorBlink:                  true
-!! URxvt*cursorUnderline:              true
-!! URxvt*cursorColor:                  #737077
-!! URxvt*underlineURLs:                true
-
-!! URxvt*font: -*-dina-medium-r-*-*-*-90-*-*-*-*-*-*
-!! URxvt*italic: -*-dina-medium-*-*-*-*-90-*-*-*-*-*-*
-!! URxvt*boldFont: -*-dina-bold-r-*-*-*-90-*-*-*-*-*-*

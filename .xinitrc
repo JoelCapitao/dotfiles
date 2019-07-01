@@ -1,6 +1,6 @@
 #!/bin/sh
 
-[ -f ~/.Xmodmap  ] && xmodmap ~/.Xmodmap
-[ -f ~/.Xresources  ] && xrdb -merge ~/.Xresources
+[ -f $HOME/.Xresources ] && xrdb -merge ~/.Xresources
+[ -f $HOME/.xprofile  ] && . ~/.xprofile
 
 exec i3
