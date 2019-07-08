@@ -4,10 +4,11 @@ session_root "~/ownCloud/Development/netary/lestriskelles"
 
 # Create session with specified name if it does not already exist. If no
 # argument is given, session name will be based on layout file name.
-if initialize_session "hugo"; then
+if initialize_session "lestriskelles"; then
 
   # Load a defined window layout.
   load_window "hugo"
+  load_window "vim"
 
   # Select the default active window on session creation.
   select_window 1
