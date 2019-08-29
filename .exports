@@ -6,6 +6,9 @@ export TERMINAL="terminator";
 export BROWSER="firefox";
 export FILE="ranger";
 
+# Explicitly define PS1
+export PS1='[\u@\h \W]$ '
+
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=50000000;
 export HISTFILESIZE=$HISTSIZE;
