@@ -1,7 +1,7 @@
 #!/bin/bash
 
-packages=$(apt-get -s dist-upgrade | awk '/^Inst/ { print $2  }')
-numPackages=$(apt-get -s dist-upgrade | awk '/^Inst/ { print $2  }' | wc -l)
+packages=$(dnf updateinfo --list | tail -n +2)
+numPackages=$(dnf updateinfo --list | tail -n +2 | wc -l)
 
 echo "$numPackages"
 echo "$numPackages"
