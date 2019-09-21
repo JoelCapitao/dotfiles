@@ -20,6 +20,7 @@ set $hibernate sudo -A systemctl suspend
 
 # external scripts
 exec --no-startup-id feh --bg-scale ~/.config/wall.jpg
+exec --no-startup-id compton -b &
 
 # basic bindings
 bindsym $mod+Return	      exec $term
