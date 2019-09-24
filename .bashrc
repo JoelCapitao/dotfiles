@@ -23,7 +23,8 @@ for option in autocd globstar; do
     shopt -s "$option" 2> /dev/null
   done
 
-
+# Enable Readline vi Mode
+set -o vi
 
 # Load .bashrc and other files...
 for file in ~/.{bash_prompt,aliases,functions,path,dockerfunc,extra,exports}; do
