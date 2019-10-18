@@ -3,13 +3,14 @@
 packages=$(dnf updateinfo --list --enhancement --newpackage --bugfix --sec-severity Critical --sec-severity Important | tail -n +2)
 numPackages=$(echo -e "$packages" | wc -l)
 
-echo "$numPackages"
-echo "$numPackages"
-
-if [ $numPackages -eq 0 ]
+if [ -z $packages ]
 then
+    echo "0"
+    echo "0"
     echo "#00ff00"
 else
+    echo "$numPackages"
+    echo "$numPackages"
     echo "#ff0000"
 fi
 
