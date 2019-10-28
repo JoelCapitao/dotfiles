@@ -20,6 +20,7 @@ set $hibernate sudo -A systemctl suspend
 
 # external scripts
 exec --no-startup-id feh --bg-scale ~/.config/wall.jpg
+exec --no-startup-id redshift -l 49.856613:2.352222 -t 5600:3400
 
 # basic bindings
 bindsym $mod+Return	      exec $term
