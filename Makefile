@@ -1,5 +1,5 @@
 .PHONY: all
-all: dotfiles
+all: dotfiles config
 
 .PHONY: dotfiles
 dotfiles: ## Installs the dotfiles.
