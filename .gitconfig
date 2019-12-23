@@ -185,10 +185,11 @@
 	gpgsign = false
 
 [user]
-        
         name = Joel Capitao
-        email = joel@capitao.fr
+        email = jcapitao@redhat.com
 
 [github]
+        user = jcapiitao
 
-        user = jcapitao
+[gitreview]
+	username = jcapiitao
