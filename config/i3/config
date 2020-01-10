@@ -114,6 +114,15 @@ bindsym $mod+Shift+n		floating toggle; sticky toggle; exec --no-startup-id botto
 bindsym $mod+m 			exec --no-startup-id $term -e ncmpcpp
 bindsym $mod+Shift+m		exec --no-startup-id lmc mute
 
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
