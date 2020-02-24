@@ -2,8 +2,8 @@ command=~/.scripts/statusbar/$BLOCK_NAME
 separator_block_width=15
 markup=pango
 
-#[packages]
-#interval=5
+[packages]
+interval=5
 
 [public-ip]
 command=wget -qO - icanhazip.com
